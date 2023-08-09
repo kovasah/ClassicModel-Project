@@ -4,7 +4,9 @@
 
         <?php foreach ($products as $product): ?>
             <li>
-                <?= $product['productName'] ?>
+                <a href="product.php?productCode=<?= $product['productCode'] ?>">
+                    <?= $product['productName'] ?>
+                </a>
             </li>
         <?php endforeach; ?>
     </ul>

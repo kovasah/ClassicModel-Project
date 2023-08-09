@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
+session_start();
 
-
-//connexion a la DB
+//connexion a la DB + les afficher
 
 try {
     $pdo = new PDO(
@@ -21,11 +21,13 @@ try {
     print_r($e->getMessage());
 }
 
-//afficher les produits
+
+
+
 include 'public/view/layout/header.views.php';
 
 include 'public/view/layout/footer.views.php';
 
 include 'public/view/layout/index.views.php';
 
-include 'public/view/layout/singleProduct.views.php';
+//include 'public/view/layout/singleProduct.views.php';
